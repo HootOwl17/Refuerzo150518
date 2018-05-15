@@ -21,10 +21,15 @@ switch (Estado) {
     Sensor1Tmp = 0;
     console.log("Valor Actual: " + Sensor1);
   }else{
-  Sensor1Tmp = Sensor1Tmp* 10 + data[i];
-  console.log("Valor Actual: " + Sensor1);
-}
+    if (data[i] == )
+  }
     break;
+    case 1:
+      if (data[i] == 101) {
+      Sensor2 = Sensor1Tmp;
+      Sensor2Tmp = 0;
+      console.log("Valor Actual: " + Sensor1);
+    }
   default:
 
 }

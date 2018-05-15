@@ -10,14 +10,19 @@ void setup() {
 int Residuo [4] = {0, 0, 0, 0};
 void loop() {
   // put your main code here, to run repeatedly:
- int Valor1 = 1234;
+ int Valor1 = analogRead(Sensor1);
+ int Valor2 = analogRead(Sensor2);
  //int Residuo[i] = Valor1 % 10;
- //Valor1 = Valor / 10;
- Serial.println(Valor1);
+ //
  for (int i = 0; i <= 3; i++) {
  Residuo[i] = Valor1 / 10;
+ Valor1 = Valor1 / 10;
  //Serial.println(Residuo[i]);
  }
+
+ Serial.write('a')
+ 
+ 
  for (int i = 3; i >= 0; i--){
   Serial.println(Residuo[i]);
  }
