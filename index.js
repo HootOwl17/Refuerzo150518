@@ -4,5 +4,27 @@ var Port = new SerialPort("COM3", {
 });
 
 port.on('data', function (data) {
-  console.log('Data:', data);
+  console.log('Data:', data[0]);
 });
+for (var i =0;i< data.length; i++)
+switch (Estado) {
+  case 0:
+    if (data[i] == 97){
+    Estado =1;
+    Sensor1Tmp =0;
+    console.log("Iniciando...");
+    }
+    break;
+  case 1:
+    if (data[i] == 99) {
+    Sensor1 = Sensor1Tmp;
+    Sensor1Tmp = 0;
+    console.log("Valor Actual: " + Sensor1);
+  }else{
+  Sensor1Tmp = Sensor1Tmp* 10 + data[i];
+  console.log("Valor Actual: " + Sensor1);
+}
+    break;
+  default:
+
+}
